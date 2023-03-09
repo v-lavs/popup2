@@ -99,7 +99,9 @@ table {
   font-size: 15px;
   padding: 12px;
 }
-
+body{
+  font-family: 'Raleway', sans-serif;
+}
 
 body.modal-open {
   overflow: hidden;
