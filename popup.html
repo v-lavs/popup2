@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--зaкрыть индексацию -->
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="robots" content="noindex">
+    <meta name="yandex" content="none">
+
+    <title>popup</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/popup.css">
+</head>
+<body>
+<div class="overlay"></div>
+
+<button id="triggerPopupInform">Click For Modal</button>
+<div class="modal-inform modal-inform-2" tabindex="-1" id="popupInform">
+
+    <div class="modal-inform__header">
+        <button type="button" id="closePopupInform" class="btn btn_close" data-bs-dismiss="modal"
+                aria-label="Close"></button>
+    </div>
+    <div class="modal-inform__wrap">
+        <div class="modal-inform__body">
+            <div class="part part_left">
+                <img src="assets/img/012.jpg" alt="" class="modal-inform__img">
+            </div>
+            <div class="part part_right">
+                <div class="modal-inform-2__heading">
+                    <span class="heading-logo">
+                        <img src="assets/img/logo-popup.svg" alt="111 Зелена">
+                    </span>
+
+                    <h3 class="modal-inform-2__title">СТАРТ ПРОДАЖУ</h3>
+                </div>
+                <div class="modal-inform__content">
+                    <img src="assets/img/number-section.svg" alt="Секція 2">
+                </div>
+
+                <div class="part__footer">
+                    <a href="#" class="btn btn_main btn_big btn_gold"><span class="btn__img">
+                        <img src="assets/img/phone.svg" alt="">
+                    </span> ЗАТЕЛЕФОНУВАТИ</a>
+                    <div class="part__footer-text">*Наш менеджер ознайомить Вас з інформацією</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="notification">
+    <button class="notification__close"><span class="hide-mob">Закрити</span></button>
+    <div class="notification__logo">
+        <img src="assets/img/notification-logo.svg" alt="111 Зелена">
+    </div>
+    <div class="notification__wrap-img">
+        <img src="assets/img/notification-img.jpg" alt="">
+    </div>
+    <div class="notification__content">
+        <div class="notification__date">з 15 березня</div>
+        <div class="notification__text">
+            вартість квадратного метра у нашому ЖК зміниться,
+            тож ви ще маєте час обрати нерухомість за старою ціною.
+        </div>
+    </div>
+    <a href="#" class="btn btn_gold"><span class="btn__img">
+                        <img src="assets/img/phone.svg" alt="">
+                    </span> ЗАТЕЛЕФОНУВАТИ</a>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        const elements = $('#popupInform');
+
+        $('#triggerPopupInform').click(function () {
+            elements.addClass('open_modal');
+            jQuery('.overlay').fadeIn();
+            $('body').addClass('modal_open');
+        });
+
+        $('#closePopupInform, .overlay').click(function () {
+            elements.removeClass('open_modal');
+            jQuery('.overlay').fadeOut();
+            $('body').removeClass('modal_open');
+        });
+    });
+</script>
+</body>
+</html>
