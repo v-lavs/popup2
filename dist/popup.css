@@ -99,7 +99,8 @@ table {
   font-size: 15px;
   padding: 12px;
 }
-body{
+
+body {
   font-family: 'Raleway', sans-serif;
 }
 
@@ -518,7 +519,8 @@ body.modal-open {
 }
 
 .modal-inform__wrap {
-  background-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(13%, #fff));
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, transparent), color-stop(13%, #fff));
+  background-image: -o-linear-gradient(left, transparent 0 13%, #fff 13% 100%);
   background-image: linear-gradient(to right, transparent 0 13%, #fff 13% 100%);
 }
 
@@ -530,7 +532,11 @@ body.modal-open {
 }
 
 .modal-inform-2__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding-top: 76px;
   padding-bottom: 46px;
@@ -548,14 +554,19 @@ body.modal-open {
   display: inline-block;
   width: 124px;
   height: 100px;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   margin-right: 42px;
 }
 
 .modal-inform__content {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 30px 40px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   border-radius: 20px;
   margin-bottom: 46px;
@@ -565,6 +576,8 @@ body.modal-open {
   position: absolute;
   content: '';
   display: block;
+  background: -webkit-gradient(linear, right top, left top, color-stop(2.33%, #FFFFFF), to(rgba(204, 204, 204, .25)));
+  background: -o-linear-gradient(right, #FFFFFF 2.33%, rgba(204, 204, 204, .25) 100%);
   background: linear-gradient(270deg, #FFFFFF 2.33%, rgba(204, 204, 204, .25) 100%);
   bottom: 0;
   top: 0;
@@ -613,6 +626,8 @@ body.modal-open {
 .notification {
   position: relative;
   background-color: #449922;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-weight: 500;
   font-size: 24px;
@@ -664,12 +679,15 @@ body.modal-open {
   top: 0;
   right: 0;
   bottom: 0;
+  -o-object-fit: cover;
   object-fit: cover;
   z-index: 1;
 }
 
 .notification__content {
   padding: 27px 100px 27px 65px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   overflow: hidden;
 }
@@ -705,6 +723,7 @@ body.modal-open {
   color: #000;
   padding: 11px 62px 12px;
   margin-bottom: 27px;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
 }
 
@@ -730,11 +749,12 @@ body.modal-open {
   height: 10px;
   background-image: url(../assets/img/notif-close.svg);
   background-repeat: no-repeat;
-  -webkit-background-size: 10px 10px;
   background-size: 10px 10px;
   background-position: center;
   right: 0;
   top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   z-index: 1;
 }
@@ -788,6 +808,15 @@ body.modal-open {
   .modal-inform-2 .modal-inform__body {
     background-size: cover;
   }
+
+  .modal-inform__content:before {
+    background-image: url(../assets/img/bg-popup2a.jpg);
+    background-position: right 0;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    z-index: 1;
+  }
 }
 
 @media screen and (max-width: 760px) {
@@ -800,6 +829,7 @@ body.modal-open {
   }
 
   .notification {
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding-right: 0;
     font-size: 16px;
@@ -808,14 +838,17 @@ body.modal-open {
   .notification__content {
     width: 70%;
   }
-  .notification__date{
+
+  .notification__date {
     font-size: 20px;
   }
+
   .notification .btn {
     margin-bottom: 0;
     width: 100%;
   }
-  .notification__logo{
+
+  .notification__logo {
     max-width: 100px;
   }
 }
@@ -834,6 +867,7 @@ body.modal-open {
   .modal-inform-2__title {
     font-size: 29px;
   }
+
   .notification__date {
     font-size: 13px;
     line-height: 12px;
