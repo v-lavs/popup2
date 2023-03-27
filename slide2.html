@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--зaкрыть индексацию -->
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="robots" content="noindex">
+    <meta name="yandex" content="none">
+
+    <title>slider2</title>
+    <link href="jquery.easy_slides.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/popup.css">
+</head>
+<body>
+<style>
+    .slider_circle_10 {
+        width: 100%;
+        height: auto;
+        padding-top: 32.3%;
+        background-color: mistyrose;
+    }
+
+    .slider_circle_10 .slide {
+        padding: 5px;
+        border: 1px solid;
+        opacity: 0;
+
+    }
+
+    .slider_circle_10 .prev2,
+    .slider_circle_10 .next2,
+    .slider_circle_10 .active{
+        opacity: 1;
+    }
+    .slider_circle_10 .active {
+        top: 0;
+        width: calc(48% - 5px);
+        height: 100%;
+        margin-left: 0;
+        transform: translateX(-50%);
+    }
+
+    .slider_circle_10 .prev1 {
+        top: 0;
+        opacity: .3;
+        margin-left: -50%;
+        width: calc(25.75% - 5px);
+        height: 50%;
+    }
+
+    .slider_circle_10 .prev2 {
+        margin-top: 10px;
+        margin-left: -36.25%;
+        width: calc(12% - 5px);
+        height: 25%;
+    }
+
+    .slider_circle_10 .next1 {
+        top: auto;
+        bottom: 0;
+        opacity: .3;
+        width: calc(25.75% - 5px);
+        height: 50%;
+        right: 0;
+        left: auto;
+    }
+
+    .slider_circle_10 .next2 {
+        width: calc(12% - 5px);
+        transform: translateY(-100%);
+        margin-left: 24.75%;
+        height: 25%;
+        margin-top: -10px;
+    }
+</style>
+<main>
+
+    <div class="slider slider_circle_10">
+
+        <div class="slide">
+            <img src="assets/img/slider/1.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="assets/img/slider/2.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="assets/img/slider/3.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="assets/img/slider/4.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="assets/img/slider/5.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="assets/img/slider/6.jpg" alt="">
+        </div>
+
+        <div class="next_button">NEXT</div>
+        <div class="prev_button">PREV</div>
+    </div>
+
+</main>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="jquery.easy_slides.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $('.slider_circle_10').EasySlides({
+            'show': 100,
+            'loop': true,
+            // 'timeout': 3000,
+            'touchevents': true,
+            // 'delayaftershow': 300,
+            // 'stepbystep': true,
+        })
+    });
+
+    // $('.slider').EasySlides({
+    //     // 'autoplay': true,
+    //     // 'loop': true,
+    //     // 'timeout': 3000,
+    //     // 'show': 5,
+    //     // 'vertical': false,
+    //     // 'reverse': false,
+    //     //
+    //     // 'startslide': 0,
+    //     // 'beforeshow': function () {
+    //     // },
+    //     // 'aftershow': function () {
+    //     // },
+    // });
+</script>
+</body>
+</html>
