@@ -29,14 +29,17 @@
         padding: 5px;
         border: 1px solid;
         opacity: 0;
-
+        background-color: #ffffff;
     }
 
+    .slider_circle_10 .prev1,
     .slider_circle_10 .prev2,
+    .slider_circle_10 .next1,
     .slider_circle_10 .next2,
-    .slider_circle_10 .active{
+    .slider_circle_10 .active {
         opacity: 1;
     }
+
     .slider_circle_10 .active {
         top: 0;
         width: calc(48% - 5px);
@@ -47,10 +50,13 @@
 
     .slider_circle_10 .prev1 {
         top: 0;
-        opacity: .3;
         margin-left: -50%;
         width: calc(25.75% - 5px);
         height: 50%;
+    }
+
+    .slider_circle_10 .prev1 {
+        opacity: .3;
     }
 
     .slider_circle_10 .prev2 {
@@ -77,6 +83,57 @@
         height: 25%;
         margin-top: -10px;
     }
+
+    .slider_circle_10 .next_button,
+    .slider_circle_10 .prev_button {
+        width: 60px;
+        height: 60px;
+        background-color: transparent !important;
+        opacity: .7 !important;
+        border-color: #ffffff !important;
+        border-width: 2px !important;
+    }
+
+    .slider_circle_10 .next_button {
+        left: 70% !important;
+    }
+
+    .slider_circle_10 .prev_button {
+        left: 30% !important;
+    }
+
+    .slider_circle_10 .prev_button {
+        transform: rotate(180deg);
+    }
+
+    .slider_circle_10 .next_button:hover,
+    .slider_circle_10 .prev_button:hover,
+    .slider_circle_10 .next_button:focus,
+    .slider_circle_10 .prev_button:focus {
+        box-shadow: inset 0 0 9px 7px rgba(255, 255, 255, 0.7);
+    }
+
+    .slider_circle_10 .next_button:after,
+    .slider_circle_10 .prev_button:after {
+        display: none;
+    }
+
+    .slider_circle_10 .next_button:before,
+    .slider_circle_10 .prev_button:before {
+        position: absolute;
+        content: '';
+        background-image: url(assets/img/slider/arrow-right2.svg);
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        -webkit-background-size: 20px 20px;
+        background-size: 20px 20px;
+        background-position: center;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
 </style>
 <main>
 
@@ -101,8 +158,9 @@
             <img src="assets/img/slider/6.jpg" alt="">
         </div>
 
-        <div class="next_button">NEXT</div>
-        <div class="prev_button">PREV</div>
+        <div class="next_button"></div>
+        <div class="prev_button"></div>
+
     </div>
 
 </main>
@@ -114,26 +172,11 @@
     $(document).ready(function () {
 
         $('.slider_circle_10').EasySlides({
-            'show': 20,
             'loop': true,
             'touchevents': true,
         })
     });
 
-    // $('.slider').EasySlides({
-    //     // 'autoplay': true,
-    //     // 'loop': true,
-    //     // 'timeout': 3000,
-    //     // 'show': 5,
-    //     // 'vertical': false,
-    //     // 'reverse': false,
-    //     //
-    //     // 'startslide': 0,
-    //     // 'beforeshow': function () {
-    //     // },
-    //     // 'aftershow': function () {
-    //     // },
-    // });
 </script>
 </body>
 </html>
