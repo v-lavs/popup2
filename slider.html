@@ -26,19 +26,19 @@
 
 
             .swiper-test {
-            min-height: 600px;
+                min-height: 600px;
                 padding: 4rem 0;
-            /*width: 40%;*/
-            margin: 0 auto;
-            position: relative;
+                /*width: 40%;*/
+                margin: 0 auto;
+                position: relative;
 
             }
 
             .swiper-test img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
 
             /*.swiper-wrapper {*/
@@ -47,35 +47,43 @@
 
 
             .swiper-slide {
-            position: relative;
-            /*transform: scale(.25);*/
-            transition: all 1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-            opacity: .3;
-            margin: 0 10px;
-            /*z-index: 0;*/
-            height: auto;
+                position: relative;
+                /*transform: scale(.25);*/
+                transition: all 1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+                opacity: .3;
+                margin: 0 10px;
+                /*z-index: 0;*/
+                height: auto;
+                max-width: 200px;
+                width: 15%;
             }
 
             .swiper-slide-active {
-            /*transform: scale(1);*/
-            /*transition: all 1s cubic-bezier(0.68, -0.6, 0.32, 1.6);*/
-            /*opacity: 1;*/
-            /*z-index: 1;*/
+                transform: scale(1);
+                transition: all 1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+                opacity: 1;
+                z-index: 1;
+                max-width: 800px;
+                width: 40%;
             }
+
             .swiper-slide-prev {
-            /*transform: scale(.5) translate(50%, -50%);*/
+                /*transform: scale(.5) translate(50%, -50%);*/
             }
 
             .swiper-slide-next {
-            /*transform: scale(.5) translate(-50%, 50%);*/
+                /*transform: scale(.5) translate(-50%, 50%);*/
             }
 
             .two .swiper-slide {
-                width: 600px;
+                max-width: 800px;
+                width: 40%;
+
             }
+
             /*.swiper-slide .slider-image .preview-icon {*/
-                /*z-index: -1;*/
-                /*width: calc(100% - 30px);*/
+            /*z-index: -1;*/
+            /*width: calc(100% - 30px);*/
             /*}*/
 
         </style>
@@ -292,14 +300,14 @@
         // https://codepen.io/shamim539/pen/vdaqQG
         var swiper2 = new Swiper('.two', {
             effect: 'coverflow',
-        grabcursor: 'true',
+            grabcursor: 'true',
             loop: true,
             centeredSlides: true,
             slidesPerView: 'auto',
             coverflowEffect: {
                 rotate: 0,
                 stretch: 0,
-                depth: 50,
+                depth: 100,
                 modifier: 2.5,
                 slideShadows: false,
             }
