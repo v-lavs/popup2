@@ -22,19 +22,27 @@
         width: 100%;
         height: auto;
         padding-top: 32.3%;
-        background-color: mistyrose;
+        /*background-color: mistyrose;*/
     }
 
     .slider_circle_10 .slide {
-        padding: 5px;
-        border: 1px solid;
+        display: flex;
+        border: 1px solid #dde3ed;
+        flex-direction: column;
+        justify-content: flex-end;
         opacity: 0;
         background-color: #ffffff;
     }
 
+    .slider_circle_10 .slide p {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
     .slider_circle_10 .prev1,
-    .slider_circle_10 .prev2,
     .slider_circle_10 .next1,
+    .slider_circle_10 .prev2,
     .slider_circle_10 .next2,
     .slider_circle_10 .active {
         opacity: 1;
@@ -46,6 +54,17 @@
         height: 100%;
         margin-left: 0;
         transform: translateX(-50%);
+    }
+
+    .slider_circle_10 .active .text {
+        font-size: 20px;
+        padding: 20px;
+    }
+
+    .slider_circle_10 .active p {
+        text-overflow: clip;
+        white-space: normal;
+        overflow: visible;
     }
 
     .slider_circle_10 .prev1 {
@@ -134,28 +153,118 @@
         transform: translate(-50%, -50%);
     }
 
+    .wrap-img {
+        position: relative;
+        overflow: hidden;
+        height: 80%;
+    }
+
+    .text {
+        width: 100%;
+        height: 20%;
+        background-color: #fff;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 10px;
+        position: relative;
+        padding: 10px;
+    }
+
+    .slider2.slider_circle_10 .wrap-img {
+        height: 100%;
+        position: absolute;
+        width: 100%;
+    }
+
+    .slider2.slider_circle_10 .text {
+        position: relative;
+        color: #ffffff;
+        font-weight: 600;
+        background-color: transparent;
+        height: auto;
+    }
+
+    .slider2.slider_circle_10 .wrap-img:before {
+        position: absolute;
+        content: '';
+        background-image: linear-gradient(to top, #000000 0%, transparent 100%);
+        z-index: 1;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 75%;
+    }
 </style>
 <main>
 
-    <div class="slider slider_circle_10">
+    <div class="slider slider2 slider_circle_10 ">
 
         <div class="slide">
-            <img src="assets/img/slider/1.jpg" alt="">
+            <div class="wrap-img">
+                <img src="assets/img/slider/1.jpg" alt="">
+            </div>
+            <div class="text">
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti deserunt dolore ducimus facere
+                    iure,
+                    nam obcaecati odit quia. Eaque, perspiciatis.
+                </p>
+            </div>
         </div>
         <div class="slide">
-            <img src="assets/img/slider/2.jpg" alt="">
+            <div class="wrap-img">
+                <img src="assets/img/slider/2.jpg" alt="">
+            </div>
+            <div class="text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti deserunt dolore ducimus facere
+                    iure,
+                    nam obcaecati odit quia. Eaque, perspiciatis.
+                </p>
+            </div>
+
         </div>
         <div class="slide">
-            <img src="assets/img/slider/3.jpg" alt="">
+            <div class="wrap-img">
+                <img src="assets/img/slider/3.jpg" alt="">
+            </div>
+            <div class="text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti deserunt dolore ducimus facere
+                    iure,
+                    nam obcaecati odit quia. Eaque, perspiciatis.
+                </p>
+            </div>
         </div>
         <div class="slide">
-            <img src="assets/img/slider/4.jpg" alt="">
+            <div class="wrap-img">
+                <img src="assets/img/slider/4.jpg" alt="">
+            </div>
+            <div class="text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti deserunt dolore ducimus facere
+                    iure,
+                    nam obcaecati odit quia. Eaque, perspiciatis.
+                </p>
+            </div>
         </div>
         <div class="slide">
-            <img src="assets/img/slider/5.jpg" alt="">
+            <div class="wrap-img">
+                <img src="assets/img/slider/5.jpg" alt="">
+            </div>
+            <div class="text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti deserunt dolore ducimus facere
+                    iure,
+                    nam obcaecati odit quia. Eaque, perspiciatis.
+                </p>
+            </div>
+
         </div>
         <div class="slide">
-            <img src="assets/img/slider/6.jpg" alt="">
+            <div class="wrap-img">
+                <img src="assets/img/slider/6.jpg" alt="">
+            </div>
+            <div class="text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti deserunt dolore ducimus facere
+                    iure,
+                    nam obcaecati odit quia. Eaque, perspiciatis.
+                </p>
+            </div>
         </div>
 
         <div class="next_button"></div>
