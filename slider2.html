@@ -15,10 +15,11 @@
     <link rel="stylesheet" id="font-Montserrat-css"
           href="https://fonts.googleapis.com/css?family=Montserrat%3A300%2C500%2C600%2C700&amp;display=swap&amp;ver=6.1.1"
           type="text/css" media="all">
-    <link rel="stylesheet" href="dist/popup.css">
+
 </head>
 <body>
 <style>
+
     .slider_circle_10 {
         width: 100%;
         height: auto;
@@ -27,9 +28,16 @@
     }
 
     .slider_circle_10 .slide {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         border: 1px solid #dde3ed;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
         justify-content: flex-end;
         opacity: 0;
         background-color: #ffffff;
@@ -46,6 +54,7 @@
     }
 
     .slider_circle_10 .text p {
+        -o-text-overflow: ellipsis;
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
@@ -62,6 +71,8 @@
         width: calc(48% - 5px);
         height: 100%;
         margin-left: 0;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
         transform: translateX(-50%);
     }
 
@@ -71,6 +82,7 @@
     }
 
     .slider_circle_10 .active p {
+        -o-text-overflow: clip;
         text-overflow: clip;
         white-space: normal;
         overflow: visible;
@@ -110,9 +122,9 @@
 
 
     /*.wrap-img {*/
-        /*position: relative;*/
-        /*overflow: hidden;*/
-        /*height: 80%;*/
+    /*position: relative;*/
+    /*overflow: hidden;*/
+    /*height: 80%;*/
     /*}*/
 
     /*.text {*/
@@ -135,6 +147,8 @@
     .slider_circle_10 .wrap-img:before {
         position: absolute;
         content: '';
+        background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, .5)), to(transparent));
+        background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, .5) 0%, transparent 100%);
         background-image: linear-gradient(to top, rgba(0, 0, 0, .5) 0%, transparent 100%);
         z-index: 1;
         left: 0;
@@ -162,6 +176,8 @@
     }
 
     .slider_circle_10 .prev_button {
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
         transform: rotate(180deg);
     }
 
@@ -169,6 +185,7 @@
     .slider_circle_10 .prev_button:hover,
     .slider_circle_10 .next_button:focus,
     .slider_circle_10 .prev_button:focus {
+        -webkit-box-shadow: inset 0 0 9px 7px rgba(255, 255, 255, 0.7);
         box-shadow: inset 0 0 9px 7px rgba(255, 255, 255, 0.7);
     }
 
@@ -185,11 +202,12 @@
         width: 24px;
         height: 24px;
         background-repeat: no-repeat;
-        -webkit-background-size: 20px 20px;
         background-size: 20px 20px;
         background-position: center;
         left: 50%;
         top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
     }
 
@@ -264,7 +282,7 @@
 
         <div class="slide">
             <div class="wrap-img">
-                <img src="assets/img/slider/1.jpg" alt="">
+                <img src="assets/img/slider/1.png" alt="">
             </div>
             <div class="text">
                 <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti deserunt dolore ducimus facere
@@ -275,7 +293,7 @@
         </div>
         <div class="slide">
             <div class="wrap-img">
-                <img src="assets/img/slider/2.jpg" alt="">
+                <img src="assets/img/slider/2.png" alt="">
             </div>
             <div class="text">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti deserunt dolore ducimus facere
@@ -339,7 +357,7 @@
 </main>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="jquery.easy_slides.js"></script>
 <script>
     $(document).ready(function () {
