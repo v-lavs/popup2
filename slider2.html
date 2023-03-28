@@ -12,13 +12,13 @@
 
     <title>slider2</title>
     <link href="jquery.easy_slides.css" rel="stylesheet"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" id="font-Montserrat-css" href="https://fonts.googleapis.com/css?family=Montserrat%3A300%2C500%2C600%2C700&amp;display=swap&amp;ver=6.1.1" type="text/css" media="all">
     <link rel="stylesheet" href="dist/popup.css">
 </head>
 <body>
 <style>
     .slider_circle_10 {
+        font-family: 'Montserrat';
         width: 100%;
         height: auto;
         padding-top: 32.3%;
@@ -109,8 +109,6 @@
 
     .slider_circle_10 .next_button,
     .slider_circle_10 .prev_button {
-        width: 60px;
-        height: 60px;
         background-color: transparent !important;
         opacity: .7 !important;
         border-color: #ffffff !important;
@@ -190,12 +188,77 @@
     .slider2.slider_circle_10 .wrap-img:before {
         position: absolute;
         content: '';
-        background-image: linear-gradient(to top, rgba(0,0,0, .5) 0%, transparent 100%);
+        background-image: linear-gradient(to top, rgba(0, 0, 0, .5) 0%, transparent 100%);
         z-index: 1;
         left: 0;
         right: 0;
         bottom: 0;
         top: 50%;
+    }
+
+    @media screen and (max-width: 991px) {
+        .slider_circle_10 .active .text {
+            font-size: 14px;
+        }
+
+        .slider_circle_10 .next_button,
+        .slider_circle_10 .prev_button {
+            width: 35px !important;
+            height: 35px !important;
+        }
+
+        .slider_circle_10 .next_button:before,
+        .slider_circle_10 .prev_button:before {
+            background-size: 15px 15px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .slider_circle_10 {
+            padding-top: 57.25%;
+        }
+
+        .slider_circle_10 .active {
+            width: 84%;
+        }
+
+        .slider_circle_10 .next_button {
+            left: 86% !important;
+        }
+
+        .slider_circle_10 .prev_button {
+            left: 16% !important;
+        }
+
+        .slider_circle_10 .prev1 {
+            top: 10%;
+            width: 40%;
+            height: 80%;
+        }
+
+        .slider_circle_10 .next1 {
+            opacity: .3;
+            width: 40%;
+            height: 80%;
+            top: 10%;
+        }
+
+        .slider_circle_10 .prev2,
+        .slider_circle_10 .next2 {
+            opacity: 0;
+        }
+    }
+
+    @media screen and (max-width: 540px) {
+        .slider_circle_10 .active .text {
+            font-size: 11px;
+            padding: 10px;
+        }
+
+        .slider_circle_10 .next_button,
+        .slider_circle_10 .prev_button {
+            display: none;
+        }
     }
 </style>
 <main>
